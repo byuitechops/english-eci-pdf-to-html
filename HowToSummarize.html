@@ -6,13 +6,6 @@
     <style>
         /*Images and icons*/
         
-        .arrow {
-            content: url('arrow.png');
-            position: relative;
-            font-family: sans-serif;
-            display: inline;
-        }
-        
         .key {
             background-color: #78AD3C;
             font-size: 40px;
@@ -49,63 +42,6 @@
             position: absolute;
             left: -50px;
             top: -50px;
-        }
-        
-        .magnifying-glass:after {
-            content: url('magnifying-glass.png');
-            position: relative;
-            right: 0px;
-            top: 70px;
-        }
-        
-        .guy:after {
-            content: url('guy.png');
-            position: relative;
-            word-wrap: break-word;
-            left: 600px;
-            top: 0px;
-        }
-        
-        .guy2 {
-            content: url('guy2.png');
-            position: relative;
-            text-align: left;
-        }
-        
-        .girl {
-            content: url('girl.png');
-            position: relative;
-            text-align: right;
-            left: -370px;
-            top: -190px;
-            float: right;
-        }
-        
-        .silhouette {
-            content: url('silhouette.png');
-            position: relative;
-            text-align: left;
-            top: 100px;
-        }
-        
-        .annoyed {
-            content: url('annoyed-thought.png');
-            position: relative;
-            top: -180px;
-            right: -200px;
-        }
-        
-        .woman {
-            content: url('woman.png');
-            position: relative;
-            float: right;
-            left: -30px;
-            top: -400px;
-        }
-        
-        .read:after {
-            content: url('read.png');
-            position: relative;
         }
         /*Backgrounds and other classes*/
         
@@ -145,6 +81,7 @@
             background-color: #FFF9D7;
             max-width: 8.5in;
             margin: 1in auto;
+            position: relative;
         }
         
         p {
@@ -178,26 +115,134 @@
         li {
             font-family: sans-serif;
         }
+        
+        #magnifying-glass {
+            position: absolute;
+            z-index: -1;
+            top: -50px;
+            transform: scale(2);
+            left: 45%;
+        }
+        
+        #silhouette {
+            transform: scale(1.5);
+        }
+        
+        figure {
+            position: relative;
+            display: inline-block;
+            margin: 0;
+        }
+        
+        figcaption {
+            position: absolute;
+            font-family: sans-serif;
+        }
+        
+        #guy {
+            top: 67px;
+            left: 10px;
+            transform: rotate(15deg)
+        }
+        
+        #guy2 {
+            top: 78px;
+            left: 15px;
+            transform: scale(0.80);
+            font-size: 13px;
+        }
+        
+        #girl {
+            top: 69px;
+            left: 34px;
+            font-size: 14px;
+        }
+        
+        #silhouette {
+            font-size: 13px;
+            color: #fff;
+            top: 50px;
+            left: 10px;
+        }
+        
+        #woman {
+            font-size: 20px;
+            color: #fff;
+            top: 62px;
+            left: 105px;
+            transform: rotate(-7deg);
+        }
+        
+        #laptop {
+            font-size: 18px;
+            top: 20px;
+            left: 65px;
+        }
+        
+        #title {
+            font-size: 30px;
+            font-family: sans-serif;
+        }
+        
+        #title span {
+            padding-left: 70px;
+            font-size: 50px;
+        }
+        
+        #align {
+            display: inline;
+            vertical-align: middle;
+        }
+        
+        li p {
+            background-color: #fff;
+        }
+        
+        .underline {
+            text-decoration-line: #A6C8D7;
+        }
+
     </style>
 </head>
 
 <body>
-    <h1 class='typeface magnifying-glass'>What is a Summary?</h1>
+    <img id='magnifying-glass' src='magnifying-glass.png'>
+    <h1 id='title'>What is a <span>Summary?</span></h1>
 
     <p class='far'>A summary tells the main idea of a story, the news, a report. or any information. A summary tells the most important facts or ideas. A summary is useful for many things.</p>
 
-    <p class='guy'> When you introduce yourself, you give a summary. You tell only the facts that people want to hear.</p>
+    <figure>
+        <img src='guy.png'>
+        <figcaption id='guy'><strong>Me</strong> a summary</figcaption>
+    </figure>
+
+    <p>When you introduce yourself, you give a summary. You tell only the facts that people want to hear.</p>
 
     <p>In a job interview, you talk about your education and work experience.</p>
     <p>With new friends, you can talk about your hobbies an interests.</p>
-    <p class='guy2'>Placeholder</p>
-
-    <p class='girl'>Placeholder</p>
+    <figure>
+        <img src='guy2.png'>
+        <figcaption id='guy2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Education<br /><br /> Work Experience</figcaption>
+    </figure>
+    <figure>
+        <img src='girl.png'>
+        <figcaption id='girl'>Hobbies <br /><br />Interests</figcaption>
+    </figure>
     <p>If you give too much information, it is not a summary. A summary gives enough information to understand the main idea.</p>
+    <figure>
+        <img src='silhouette.png' id='silhouette'>
+        <figcaption id='silhouette'>Too much information</figcaption>
+    </figure>
 
-    <p class='silhouette'>Placeholder</p>
-    <p class='annoyed'>Placeholder</p>
-    <p class='woman'>Placeholder</p>
+    <figure>
+        <img src='annoyed-thought.png' id='annoyed-thought'>
+
+    </figure>
+
+    <figure>
+        <img src='woman.png'>
+        <figcaption id='woman'>A summary <br />tells the<br /> main idea.</figcaption>
+    </figure>
 
     <h1 class='key'>A summary is short.</h1>
     <p>A summary is much shorter than the original text. If the original text is one paragraph, a good summary is only one or two sentences, If the original text has many paragraphs, a good summary is only one paragraph.</p>
@@ -213,6 +258,10 @@
     <p align="center"><strong>fast = quick</strong></p>
     <p align="center"><strong>great = terrific</strong></p>
     <p class='room'>Most common words in the English language have synonyms. A thesaurus can help you find good synonyms.<a href='http://www.wordwebonline.com'>Word Web Online</a> is a useful thesaurus.</p>
+    <figure>
+        <img src='laptop.png' id='align'>
+        <figcaption id='laptop'><a href='http://www.wordwebonline.com'>http://<br />www.wordweb<br />online.com</a></figcaption>
+    </figure>
 
 
     <h1 class='orange'>SUMMARY WARM UP</h1>
@@ -247,9 +296,6 @@
 
 
 
-    <h1 class='key'>A summary is short.</h1>
-
-
 
     <h1 class='cogwheel'>STEPS FOR WRITING A SUMMARY</h1>
     <div></div>
@@ -259,22 +305,18 @@
     <p>Don't look at the text. Remember as many facts as you can. If you are studying with someone, tell them about what you read.</p>
     <h1 class='green'>3. Rewrite</h1>
     <p>Rewrite the most important information in your own words. Include facts or ideas that support the main idea. your writing should be much shorter than the originial text.</p>
-    <p class='arrow'>Placeholder</p>
+    <img src='arrow.png'>
     <div class='float'>
         <p>Read the following story and practice writing a summary.</p>
 
     </div>
     <ul>
-        <li class='read'>1. Read</li>
+        <li>1. Read</li><img src='read.png'>
         <li>
-            <p><ins>Janet has an important job interview. The job is a manager position. She is feeling very excited. She is also very nervous. 
-            Janet prepares for the interview. She practices interview questions everyday. She larns about the company. Janet is dressed her best. 
-            She knows looking professional is important. She wears a business suit. She has nice shoes and hre hair is neat. The interview goes well. 
-            Janet answers the questions directly. She gives good examples. She smiles and acts confidently. She also asks good questions. 
-            After the interview, Janet sends a thank you email. She thanks the company for the interview. Janet hopes she will get the job.</ins></p>
+            <p class='underline'>Janet has an important job interview. The job is a manager position. She is feeling very excited. She is also very nervous. Janet prepares for the interview. She practices interview questions everyday. She larns about the company. Janet is dressed her best. She knows looking professional is important. She wears a business suit. She has nice shoes and her hair is neat. The interview goes well. Janet answers the questions directly. She gives good examples. She smiles and acts confidently. She also asks good questions. After the interview, Janet sends a thank you email. She thanks the company for the interview. Janet hopes she will get the job.</p>
         </li>
     </ul>
-
+    <h1 class='key'>Read.</h1>
 
 </body>
 
