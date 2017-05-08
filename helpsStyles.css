@@ -28,6 +28,27 @@ body {
   padding: 2px 10px;
 }
 
+.note:before {
+  position: absolute;
+  left: -32px;
+  content: " ";
+  width: 30px;
+  height: 100%;
+  background: repeating-linear-gradient(180deg, #ffd, #ffd 24px, #0d8bec 25px);
+  border-right: pink 1px double;
+}
+
+.note {
+  position: relative;
+  left: 31px;
+  line-height: 25px;
+  background: repeating-linear-gradient(180deg, #ffd, #ffd 24px, #0d8bec 25px);
+}
+
+.note:first-line {
+  padding-top: 10px;
+}
+
 .key {
   background: #78ad3c;
   padding: 10px 0 10px 110px;
@@ -52,12 +73,12 @@ table {
   border-spacing: 0;
   width: 100%;
   border: solid 2px #005F83;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 tbody {
   border: solid 2px #005F83;
-  border-radius: 15px;
+  border-radius: 10px;
   border-collapse: collapse;
 }
 
@@ -65,6 +86,8 @@ th {
   background-color: #005F83;
   color: #FFF;
   border-top: none;
+  padding: 2px 5px 3px;
+  font-weight: 600;
 }
 
 td {
@@ -74,7 +97,24 @@ td {
 }
 
 th:first-child {
-  border-radius: 10px 0 0 0;
+  border-radius: 5px 0 0 0;
+}
+
+th:last-child {
+  border-radius: 0 5px 0 0;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:first-child * {
+  border-top: none;
+}
+
+td:first-child,
+th:first-child {
+  border-left: none;
 }
 
 td:last-child,
