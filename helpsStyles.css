@@ -50,7 +50,7 @@ body {
   line-height: 25px;
   background: repeating-linear-gradient(180deg, #fff, #fff 24px, #0d8bec 25px);
   background-position: 0 10px;
-  width: calc(100% - 36px);
+  width: calc(100% - 52px);
   color: #001847;
   font-family: cursive;
   border: solid #ccc;
