@@ -150,7 +150,7 @@ th:last-child {
 }
 
 
-/*CSS testing for the short key things*/
+/*things Ashley added*/
 
 .shortkey:before {
     content: "";
@@ -177,8 +177,93 @@ th:last-child {
     max-width: 300px;
 }
 
+.list-columns.four>ul,
+.list-columns.four>ol {
+    width: 18%;
+}
 
-/*Grammar Level 2 intricacies*/
+.list-columns.center {
+    text-align: center;
+}
+
+.list-columns.center * {
+    text-align: left;
+}
+
+ul {
+    display: inline-block;
+}
+
+.alignLeft {
+    float: left;
+    font-size: 30px;
+}
+
+.alignCenter {
+    margin: 0 auto;
+    width: 100px;
+    font-size: 30px;
+}
+
+.alignRight {
+    float: right;
+    font-size: 30px;
+}
+
+.support {
+    display: inline-block;
+    background: #78ad3c;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.details {
+    display: inline-block;
+    background: #0080FF;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: sans-serif;
+    position: relative;
+    max-width: 100px;
+}
+
+.highlight {
+    background-color: #FFFF00;
+}
+
+.highlightGreen {
+    border-radius: 5px;
+    background-color: #B2C987;
+}
+
+.highlightBlue {
+    background-color: #7FB8F0;
+    border-radius: 5px;
+}
+
+hr {
+    border: solid black;
+    border-width: 0 0 1px 0;
+}
+
+.close {
+    margin-bottom: 0px;
+}
+
+.close+p {
+    margin-top: 0px;
+}
+
+.image {
+    word-wrap: break-word;
+}
+
+
+/*Grammar files intricacies*/
 
 #modal {
     color: #0070C0;
@@ -203,23 +288,6 @@ th:last-child {
 #example {
     color: #0070C0;
     padding-left: 30px;
-}
-
-.highlight {
-    background-color: #FFFF00;
-}
-
-hr {
-    border: solid black;
-    border-width: 0 0 1px 0;
-}
-
-.close {
-    margin-bottom: 0px;
-}
-
-.close+p {
-    margin-top: 0px;
 }
 
 
